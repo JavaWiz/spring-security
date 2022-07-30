@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head lang="en" th:replace="fragments/header :: headerfiles"></head>
+<body>
+<nav lang="en" th:replace="fragments/navbar :: navbar"></nav>
+<div class="container-fluid">
+    <div th:fragment="logout" class="logout" sec:authorize="isAuthenticated()">
+        Logged in user: <span sec:authentication="name"></span> |
+        Authenticated user roles: <span sec:authentication="principal.authorities"></span>
+        <div>
+            <form action="#" th:action="@{/logout}" method="post">
+                <input type="submit" value="Logout" />
+            </form>
+        </div>
+        <div sec:authorize="hasRole('USER')">Text visible to user.</div>
+        <div sec:authorize="hasRole('ADMIN')">Text visible to admin.</div>
+        <div sec:authorize="isAuthenticated()">
+            Text visible only to authenticated users.
+        </div>
+    </div>
+    <p>This is an secured page.</p>
+</div>
+<div lang="en" th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

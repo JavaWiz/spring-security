@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head lang="en" th:replace="fragments/header :: headerfiles"></head>
+<body>
+<nav lang="en" th:replace="fragments/navbar :: navbar"></nav>
+<div class="container-fluid">
+<h1>Welcome To Spring Security Page</h1>
+<p>This is an unsecured page, but you can access the secured pages after authenticating.</p>
+<ul>
+    <li>Go to the <a href="/user" th:href="@{/user}">USER</a></li>
+    <li>Go to the <a href="/admin" th:href="@{/admin}">ADMIN</a></li>
+</ul>
+</div>
+<div lang="en" th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
