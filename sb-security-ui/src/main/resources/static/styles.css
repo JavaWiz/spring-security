@@ -1,0 +1,52 @@
+/* - - - - - - - - - - - *
+       Local Styles
+ * - - - - - - - - - - - */
+ 
+body {
+	font-family: helvetica;
+	font-size: 13pt;
+	padding-top: 65px; 
+}
+
+.navbar, .navbar > a {
+	font-family: helvetica;
+	font-size: 15pt;
+}
+
+ul.openlist li {
+	margin-bottom: 1em;
+}
+
+a {
+	font-family: helvetica;
+}
+
+code {
+	background-color: white;
+	border-radius: 0px;
+	color: #80A080;
+	font-size: 100%;
+	font-family: monospace;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+.userinfo, #userform {
+	color: white;
+	font-size: 100%;
+	font-family: helvetica;
+	padding: 10px 20px;
+}
+
+#userform a {
+	color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.myfooter{
+	background-color: #616161!important;
+    color: #fff;
+    /* color:#6DB33F; */
+    padding-top: 10px;
+}
